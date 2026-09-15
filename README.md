@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sakshat
 
-## Getting Started
+> AI-powered adaptive technical interview assessment platform that evaluates what candidates claim on their resumes against what they can actually demonstrate.
 
-First, run the development server:
+Sakshat is an intelligent interview assessment platform designed to make technical interviews more structured, adaptive, and evidence-driven.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of treating an interview as a fixed sequence of questions, Sakshat builds an understanding of the candidate from their resume, identifies claimed skills and competencies, conducts an adaptive technical interview, evaluates responses, and produces a structured assessment of the candidate's demonstrated capabilities.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The central idea behind Sakshat is simple:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> **Don't evaluate a candidate only by what their resume claims. Evaluate what they can actually demonstrate.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Table of Contents
 
-To learn more about Next.js, take a look at the following resources:
+- [Overview](#overview)
+- [The Problem](#the-problem)
+- [The Sakshat Approach](#the-sakshat-approach)
+- [How Sakshat Works](#how-sakshat-works)
+- [Core Features](#core-features)
+- [1. Resume Intelligence](#1-resume-intelligence)
+- [2. Candidate Skill & Competency Profile](#2-candidate-skill--competency-profile)
+- [3. Adaptive Interview Engine](#3-adaptive-interview-engine)
+- [4. Multi-Source Question Generation](#4-multi-source-question-generation)
+- [5. Answer Evaluation](#5-answer-evaluation)
+- [6. Claim vs Demonstrated Analysis](#6-claim-vs-demonstrated-analysis)
+- [7. Dynamic Difficulty Adjustment](#7-dynamic-difficulty-adjustment)
+- [8. Communication Analysis](#8-communication-analysis)
+- [9. Competency-Level Assessment](#9-competency-level-assessment)
+- [10. Interview Assessment Report](#10-interview-assessment-report)
+- [Interview Intelligence Pipeline](#interview-intelligence-pipeline)
+- [Example Interview Flow](#example-interview-flow)
+- [Data Model](#data-model)
+- [System Architecture](#system-architecture)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+- [Production Build](#production-build)
+- [Example Assessment](#example-assessment)
+- [Why Sakshat](#why-sakshat)
+- [Design Principles](#design-principles)
+- [Limitations](#limitations)
+- [Future Scope](#future-scope)
+- [Project Status](#project-status)
+- [Team](#team)
+- [Disclaimer](#disclaimer)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Overview
 
-## Deploy on Vercel
+Traditional technical interviews often depend heavily on:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Resume screening
+- Fixed interview questions
+- Subjective interviewer judgement
+- Limited interview time
+- Manual evaluation
+- Candidate self-reported skills
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A resume can demonstrate that a candidate has listed a particular technology, framework, project, or competency.
+
+However, a resume does not necessarily demonstrate the candidate's actual depth of understanding.
+
+Sakshat attempts to close this gap.
+
+The platform uses the candidate's resume as a starting point and then evaluates whether the candidate can demonstrate the knowledge and reasoning associated with the skills they claim.
+
+The system can build an interview around multiple dimensions, including:
+
+- Resume claims
+- Technical competencies
+- Company-oriented interview style
+- Previous answers
+- Difficulty level
+- Candidate performance
+
+The result is an adaptive assessment rather than a static questionnaire.
+
+---
+
+# The Problem
+
+## The Resume-Interview Gap
+
+One of the fundamental challenges in technical hiring is the gap between:
+
+**What a candidate claims**
+
+and
+
+**What a candidate can demonstrate.**
+
+For example, a candidate may list:
+
+```text
+Python
+PyTorch
+Machine Learning
+Deep Learning
+Computer Vision
